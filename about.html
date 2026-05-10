@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تعرف على الكيمياء | مختبر الإنجاز</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#05070a] text-white overflow-x-hidden font-['Cairo']">
+    
+    <!-- Mobile Navigation Drawer -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="p-8 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 border-2 border-[#00f2ff] rounded-xl flex items-center justify-center">
+            <span class="font-black text-[#00f2ff]">Ch</span>
+          </div>
+          <h4 class="font-black text-xl italic tracking-tighter text-right">مختبر الإنجاز</h4>
+        </div>
+        <button id="close-drawer" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col py-4">
+        <a href="/index.html" class="drawer-link">
+          <span class="text-xl text-right">🏠</span>
+          <span class="flex-1 text-right">الرئيسية</span>
+        </a>
+        <a href="/about.html" class="drawer-link active">
+          <span class="text-xl text-right">🔬</span>
+          <span class="flex-1 text-right">عن الكيمياء</span>
+        </a>
+        <a href="/curriculum.html" class="drawer-link">
+          <span class="text-xl text-right">📅</span>
+          <span class="flex-1 text-right">توزيع المنهج</span>
+        </a>
+        <a href="/files.html" class="drawer-link">
+          <span class="text-xl text-right">📂</span>
+          <span class="flex-1 text-right">أعمال الطلاب</span>
+        </a>
+        <a href="/enrichment.html" class="drawer-link">
+          <span class="text-xl text-right">📚</span>
+          <span class="flex-1 text-right">المواد الإثرائية</span>
+        </a>
+      </nav>
+      <div class="absolute bottom-10 left-8 right-8 p-6 glass-panel rounded-3xl border-white/5">
+        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2 text-right">Lead Supervisor</p>
+        <p class="font-bold text-white text-right">هاني البلادي</p>
+      </div>
+    </div>
+    
+    <!-- Animated background elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#00f2ff]/10 blur-[120px] rounded-full animate-pulse-slow"></div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#00ff88]/10 blur-[120px] rounded-full animate-pulse-slow delay-700"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 py-10 min-h-screen flex flex-col">
+      <header class="flex flex-col gap-10 mb-16 px-4 border-b border-white/5 pb-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 relative min-h-[80px]">
+          <!-- Hamburger Menu Button - Pinned Top Left Literal -->
+          <button id="menu-toggle" class="md:hidden absolute left-0 top-0 w-12 h-12 glass-panel rounded-xl flex items-center justify-center text-[#00f2ff] hover:bg-[#00f2ff]/10 hover:scale-110 active:scale-90 transition-all border border-white/10 z-50 shadow-lg shadow-[#00f2ff]/20">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+
+          <!-- School Details (Right Side in RTL) -->
+          <div class="text-center md:text-right space-y-1 order-1">
+            <p class="text-[8px] md:text-sm font-bold text-gray-400 uppercase tracking-tighter">وزارة التعليم</p>
+            <p class="text-[8px] md:text-sm font-bold text-gray-400">الإدارة العامة للتعليم بالمدينة المنورة</p>
+            <p class="text-[10px] md:text-sm font-black italic text-[#00f2ff]">مدرسة الأمير عبدالمحسن الثانوية</p>
+          </div>
+
+          <div class="text-center order-2 group">
+            <h1 class="text-4xl md:text-6xl font-black italic glow-text tracking-tighter">تعرف على الكيمياء</h1>
+          </div>
+
+          <div class="order-first md:order-3">
+            <img src="/logo.png" alt="MOE Logo" class="h-12 md:h-20 w-auto brightness-0 invert opacity-60" referrerPolicy="no-referrer" />
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center justify-center gap-2 bg-white/[0.03] p-1.5 rounded-2xl border border-white/5 backdrop-blur-3xl max-w-4xl mx-auto">
+          <a href="/index.html" class="whitespace-nowrap px-4 md:px-6 py-2.5 text-gray-400 font-black rounded-xl hover:text-white hover:bg-white/5 transition-all text-[10px] md:text-xs">الرئيسية</a>
+          <a href="/about.html" class="whitespace-nowrap px-4 md:px-6 py-2.5 bg-white text-black font-black rounded-xl text-[10px] md:text-xs shadow-xl shadow-white/5">عن الكيمياء</a>
+          <a href="/curriculum.html" class="whitespace-nowrap px-4 md:px-6 py-2.5 text-gray-400 font-black rounded-xl hover:text-white hover:bg-white/5 transition-all text-[10px] md:text-xs">توزيع المنهج</a>
+          <a href="/files.html" class="whitespace-nowrap px-4 md:px-6 py-2.5 text-gray-400 font-black rounded-xl hover:text-white hover:bg-white/5 transition-all text-[10px] md:text-xs">أعمال الطلاب</a>
+          <a href="/enrichment.html" class="whitespace-nowrap px-4 md:px-6 py-2.5 text-gray-400 font-black rounded-xl hover:text-white hover:bg-white/5 transition-all text-[10px] md:text-xs">المواد الإثرائية</a>
+        </nav>
+      </header>
+
+      <main class="flex-1 space-y-20 md:space-y-32">
+        <section class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="space-y-6 md:space-y-8 text-center lg:text-right">
+                <h1 class="text-3xl md:text-5xl font-black italic leading-tight">منهج <span class="text-[#00f2ff]">الكيمياء</span> - ثاني ثانوي</h1>
+                <p class="text-gray-400 text-sm md:text-lg leading-relaxed italic max-w-2xl mx-auto lg:mx-0">
+                    رحلة في أعماق المادة والطاقة، نستكشف فيها أسرار التفاعلات والروابط التي تشكل عالمنا الحيوي والعضوي.
+                </p>
+                <div class="grid grid-cols-1 gap-4 max-w-md mx-auto lg:mx-0">
+                    <div class="p-4 md:p-6 bg-white/5 rounded-2xl md:rounded-3xl border border-white/5 flex items-center gap-4">
+                        <span class="text-2xl md:text-3xl">🔋</span>
+                        <div class="text-right">
+                            <h4 class="font-black text-[#00f2ff] text-sm md:text-base">الطاقة والتغيرات الكيميائية</h4>
+                            <p class="text-[9px] md:text-[10px] text-gray-500 font-bold">دراسة الحرارة والمحتوى الحراري في التفاعلات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group w-full max-w-sm md:max-w-md mx-auto lg:mx-0">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#00f2ff]/20 to-transparent rounded-[2rem] md:rounded-[4rem] group-hover:rotate-6 transition-transform"></div>
+                <div class="relative glass-panel p-8 md:p-12 rounded-[2rem] md:rounded-[4rem] border border-white/10 flex flex-col items-center justify-center space-y-6 md:space-y-10 group-hover:-rotate-3 transition-transform overflow-hidden">
+                    <div class="text-7xl md:text-9xl animate-pulse">🧪</div>
+                    <div class="text-center space-y-2">
+                        <p class="text-xl md:text-2xl font-black">المنهج الدراسي الحديث</p>
+                        <p class="text-gray-500 font-mono text-[10px] md:text-xs uppercase tracking-widest px-2">Chemistry Curriculum 2-2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-10 md:space-y-16 pb-20">
+            <div class="text-center space-y-3 md:space-y-4">
+                <h2 class="text-3xl md:text-4xl font-black italic">فصول المقرر الدراسي</h2>
+                <div class="w-16 md:w-20 h-1.5 bg-[#00ff88] mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Chapter 1 -->
+                <div class="glass-panel p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all space-y-3 md:space-y-4 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-3 md:p-4 font-mono text-[8px] md:text-[10px] text-white/10 group-hover:text-[#00f2ff]/20 transition-colors">CHAPTER 01</div>
+                    <div class="text-3xl md:text-4xl">⚡</div>
+                    <h3 class="text-lg md:text-xl font-black">الطاقة والتغيرات الكيميائية</h3>
+                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed">فهم كيفية انتقال الطاقة وحساب التغير في المحتوى الحراري.</p>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="glass-panel p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all space-y-4 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-white/10 group-hover:text-[#00f2ff]/20 transition-colors">CHAPTER 02</div>
+                    <div class="text-4xl">⏱️</div>
+                    <h3 class="text-xl font-black">سرعة التفاعلات الكيميائية</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">دراسة نظرية التصادم والعوامل المؤثرة في سرعة التفاعلات.</p>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="glass-panel p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all space-y-4 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-white/10 group-hover:text-[#00f2ff]/20 transition-colors">CHAPTER 03</div>
+                    <div class="text-4xl">⚖️</div>
+                    <h3 class="text-xl font-black">الاتزان الكيميائي</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">استكشاف حالة الاتزان في التفاعلات المنعكسة ومناقشة مبدأ لوشاتليه.</p>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="glass-panel p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all space-y-4 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-white/10 group-hover:text-[#00f2ff]/20 transition-colors">CHAPTER 04</div>
+                    <div class="text-4xl">💎</div>
+                    <h3 class="text-xl font-black">الهيدروكربونات</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">التعرف على الألكانات والألكينات والألكاينات وتسميتها السلسة.</p>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div class="glass-panel p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all space-y-4 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-white/10 group-hover:text-[#00f2ff]/20 transition-colors">CHAPTER 05</div>
+                    <div class="text-4xl">🧬</div>
+                    <h3 class="text-xl font-black">مشتقات المركبات الهيدروكربونية وتفاعلاتها</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">دراسة المجموعات الوظيفية وأهم التفاعلات العضوية المشتقة.</p>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="glass-panel p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all space-y-4 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-white/10 group-hover:text-[#00f2ff]/20 transition-colors">CHAPTER 06</div>
+                    <div class="text-4xl">🩸</div>
+                    <h3 class="text-xl font-black">المركبات العضوية الحيوية</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">استكشاف البروتينات والسكاكر والليبيدات والأحماض النووية.</p>
+                </div>
+            </div>
+        </section>
+      </main>
+
+      <footer class="mt-48 py-20 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00f2ff]/5 blur-[120px] pointer-events-none"></div>
+        
+        <div class="grid md:grid-cols-4 gap-16 md:gap-24 relative z-10 text-right">
+          <div class="md:col-span-1 space-y-6">
+            <div class="flex items-center justify-end gap-3">
+               <h4 class="font-black text-xl">مختبر الإنجاز</h4>
+               <div class="w-10 h-10 border-2 border-[#00f2ff] rounded-xl flex items-center justify-center">
+                <span class="font-black text-[#00f2ff]">Ch</span>
+              </div>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed">منصة رقمية لتوثيق وأرشفة إنجازات الطلاب بطريقة تفاعلية وعصرية تحاكي المختبرات العلمية المتقدمة.</p>
+          </div>
+
+          <div class="space-y-6">
+            <h4 class="text-gray-500 text-[10px] font-mono uppercase tracking-[0.4em]">Supervisor</h4>
+            <div class="p-6 bg-white/5 rounded-3xl border border-white/5 flex items-center justify-end gap-4 group hover:border-[#00f2ff] transition-all">
+              <div>
+                <p class="font-black text-lg">هاني البلادي</p>
+                <p class="text-[10px] text-gray-500 uppercase">Lead Researcher</p>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-[#00f2ff]/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🎓</div>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 space-y-6">
+            <h4 class="text-gray-500 text-[10px] font-mono uppercase tracking-[0.4em]">Research Team</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="glass-panel p-5 rounded-2xl flex items-center justify-end gap-4 group hover:border-[#00ff88] transition-all cursor-crosshair">
+                <p class="font-bold text-sm">كريم الشريف</p>
+                <div class="w-8 h-8 rounded-lg bg-[#00ff88]/10 flex items-center justify-center text-xs group-hover:rotate-12 transition-transform">🔬</div>
+              </div>
+              <div class="glass-panel p-5 rounded-2xl flex items-center justify-end gap-4 group hover:border-[#00ff88] transition-all cursor-crosshair">
+                <p class="font-bold text-sm">عماد عبدالعال</p>
+                <div class="w-8 h-8 rounded-lg bg-[#00ff88]/10 flex items-center justify-center text-xs group-hover:rotate-12 transition-transform">🔬</div>
+              </div>
+              <div class="glass-panel p-5 rounded-2xl flex items-center justify-end gap-4 group hover:border-[#00ff88] transition-all cursor-crosshair">
+                <p class="font-bold text-sm">سهل العطاس</p>
+                <div class="w-8 h-8 rounded-lg bg-[#00ff88]/10 flex items-center justify-center text-xs group-hover:rotate-12 transition-transform">🔬</div>
+              </div>
+              <div class="glass-panel p-5 rounded-2xl flex items-center justify-end gap-4 group hover:border-[#00ff88] transition-all cursor-crosshair">
+                <p class="font-bold text-sm">اكرم شربيني</p>
+                <div class="w-8 h-8 rounded-lg bg-[#00ff88]/10 flex items-center justify-center text-xs group-hover:rotate-12 transition-transform">🔬</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-10">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 border border-[#00f2ff]/30 rounded-xl flex items-center justify-center font-black text-[#00f2ff] text-xs">Ch</div>
+            <p class="text-xs text-gray-500 font-mono uppercase tracking-widest">© 2026 Digital Chem Lab • Madinah Division</p>
+          </div>
+          <div class="flex items-center gap-8 flex-wrap justify-center">
+            <a href="/index.html" class="text-xs font-bold text-gray-400 hover:text-[#00f2ff] transition-colors">الرئيسية</a>
+            <a href="/about.html" class="text-xs font-bold text-[#00f2ff] transition-colors border-b border-[#00f2ff] pb-1 font-black">عن الكيمياء</a>
+            <a href="/curriculum.html" class="text-xs font-bold text-gray-400 hover:text-[#00f2ff] transition-colors">توزيع المنهج</a>
+            <a href="/files.html" class="text-xs font-bold text-gray-400 hover:text-[#00f2ff] transition-colors">أعمال الطلاب</a>
+            <a href="/enrichment.html" class="text-xs font-bold text-gray-400 hover:text-[#00f2ff] transition-colors">المواد الإثرائية</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
